@@ -3,13 +3,28 @@ import './App.css'
 
 function App() {
   
-  const [counter, setCounter] = useState(0)
+  const [counter/*state varible */, setCounter/** setter method  */] = useState(0)
 
   const increment = () => {
     console.log(`counter: ${counter} is incrementing.`);
     // counter += 1;
     // setCounter(counter)
-    setCounter(counter+1);
+    // ===
+    // {
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // }
+    //  === {
+    //   setCounter(counter+1);
+    // }
+    //===
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+
   }
 
   const decrement = () => {
